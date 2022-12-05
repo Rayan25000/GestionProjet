@@ -23,5 +23,11 @@ jobs:
          ls -a
       - name: test
         run: (test -f index.html && echo 'index présent') || echo 'index manquant'
+      - name: livraison
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+         branch: nombranche # The branch the action should deploy to.
+         folder: . # The folder the action should deploy.
+
 
 
